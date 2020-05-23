@@ -3,6 +3,9 @@ let array = [];
 let gameStatus = 1;
 let player;
 let symbol = "";
+let row;
+let coloumn;
+let input1;
 
 
 reset = () => {
@@ -34,6 +37,30 @@ tictactoe = () => {             //function to validate game
         console.log();
         console.log("1.For set row and coloumn ");
         console.log("2.For Restart ");
+
+        while(true){                        //infinite loop
+            if(player == 1){
+                computer();                 //function call computer for row and coloumn value
+                input1 = 1;
+            }
+            else if(player == 2){
+                input1 = input.questionInt("Enter 1 or 2 : ");          //input from the user
+                row = input.questionInt("Enter row value : ");          //row value
+                coloumn = input.questionInt("Enter coloumn value: ");   //coloumn value
+            }
+            if(input1 == 1){
+                set(row, coloumn, symbol); //function call set for putting the value in board
+                break;
+            }
+            else if(input1 == 2){
+                reset();                    //for resetting the game
+                break;
+            }
+            else{
+                console.log("Enter 1 or 2");
+            }
+
+        }
 
 
     }
