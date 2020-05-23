@@ -20,6 +20,11 @@ print = () => {
     console.log("1", array[3], array[4], array[5]);
     console.log("2", array[6], array[7], array[8]);
 }
+//putting random value for row and coloumn by computer
+computer = () => {
+    row = Math.random() * 3 | 0;
+    coloumn = Math.random() * 3 | 0;
+}
 tictactoe = () => {             //function to validate game
     reset();                    //reset the game
 
