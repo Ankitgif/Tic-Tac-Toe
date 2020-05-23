@@ -10,6 +10,13 @@ reset = () => {
     gameStatus = 1;
     player = 1;
 }
+//print the game board
+print = () => {                                         
+    console.log("r/c  0 1 2");
+    console.log("0", array[0], array[1], array[2]);
+    console.log("1", array[3], array[4], array[5]);
+    console.log("2", array[6], array[7], array[8]);
+}
 tictactoe = () => {             //function to validate game
     reset();                    //reset the game
 
