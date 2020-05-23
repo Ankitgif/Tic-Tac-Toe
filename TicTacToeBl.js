@@ -1,3 +1,12 @@
+/*
+* @author      : Ankit Kumar
+* @Date        : 23/05/2020
+* @Description : Tic Tac Toe game problem 
+* @Purpose     : Tic Tac Toe game program played in console
+* @Return      : player win, loss or game over    
+* @Parameter   : row and coloumn values, symbol("X","O")
+*/
+
 let input = require('readline-sync');
 let board = [];
 let gameStatus = 1;
