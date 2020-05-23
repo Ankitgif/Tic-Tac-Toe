@@ -1,5 +1,5 @@
 let input = require('readline-sync');
-let array = [];
+let board = [];
 let gameStatus = 1;
 let player;
 let symbol = "";
@@ -10,20 +10,20 @@ let index;
 
 //reset the game board
 reset = () => {
-    array = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+    board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
     gameStatus = 1;
     player = 1;
 }
 //print the game board
 print = () => {
     console.log("r/c  0 1 2");
-    console.log("0", array[0], array[1], array[2]);
-    console.log("1", array[3], array[4], array[5]);
-    console.log("2", array[6], array[7], array[8]);
+    console.log("0", board[0], board[1], board[2]);
+    console.log("1", board[3], board[4], board[5]);
+    console.log("2", board[6], board[7], board[8]);
 }
 //check row and coloumn if empty or symbol is equal or not
 checkMatch = (num1, num2, num3) => {
-    if (array[num1] != "-" && array[num1] == array[num2] && array[num2] == array[num3])
+    if (board[num1] != "-" && board[num1] == board[num2] && board[num2] == board[num3])
         gameStatus = 0;
 }
 //check row and coloumn with same value "X" or "O"
@@ -46,8 +46,8 @@ computer = () => {
 //set the value in board
 set = (row, coloumn, symbol) => {
     index = row * 3 + coloumn;
-    if (array[index] == "-") {            //if index value is empty
-        array[index] = symbol;          //set symbol
+    if (board[index] == "-") {            //if index value is empty
+        board[index] = symbol;          //set symbol
         player = player % 2 + 1;        //changing player
     }
     else {
