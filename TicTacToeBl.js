@@ -6,6 +6,7 @@ let symbol = "";
 let row;
 let coloumn;
 let input1;
+let index;
 
 
 reset = () => {
@@ -24,6 +25,17 @@ print = () => {
 computer = () => {
     row = Math.random() * 3 | 0;
     coloumn = Math.random() * 3 | 0;
+}
+//set the value in board
+set = (row, coloumn, symbol) =>{
+    index = row * 3 + coloumn;
+    if(array[index] == "-"){            //if index value is empty
+        array[index] = symbol;          //set symbol
+        player = player % 2 + 1;        //changing player
+    }
+    else{
+        console.log("Position is occupied")
+    }
 }
 tictactoe = () => {             //function to validate game
     reset();                    //reset the game
