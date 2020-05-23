@@ -1,6 +1,9 @@
+let input = require('readline-sync');
 let array = [];
 let gameStatus = 1;
 let player;
+let symbol = "";
+
 
 reset = () => {
     array = ["-", "-", "-", "-", "-", "-","-", "-", "-" ];
