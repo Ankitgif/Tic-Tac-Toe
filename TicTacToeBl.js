@@ -21,6 +21,18 @@ print = () => {
     console.log("1", array[3], array[4], array[5]);
     console.log("2", array[6], array[7], array[8]);
 }
+//check row and coloumn with same value "X" or "O"
+checkGame = () =>{
+    checkMatch(0, 1, 2);
+    checkMatch(3, 4, 5);
+    checkMatch(6, 7, 8);
+    checkMatch(0, 3, 6);
+    checkMatch(1, 4, 7);
+    checkMatch(2, 5, 8);
+    checkMatch(0, 4, 8);
+    checkMatch(2, 4, 6);
+}
+
 //putting random value for row and coloumn by computer
 computer = () => {
     row = Math.random() * 3 | 0;
@@ -78,6 +90,7 @@ tictactoe = () => {             //function to validate game
             }
 
         }
+        checkGame();
 
 
     }
