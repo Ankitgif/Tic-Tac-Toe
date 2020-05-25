@@ -25,10 +25,12 @@ reset = () => {
 }
 //print the game board
 print = () => {
-    console.log("r/c  0 1 2");
-    console.log("0", board[0], board[1], board[2]);
-    console.log("1", board[3], board[4], board[5]);
-    console.log("2", board[6], board[7], board[8]);
+    console.log('Game started: \n' +
+        board[0], '|', board[1], '|', board[2], '\n' +
+        '---------- \n' +
+    board[3], '|', board[4], '|', board[5], '\n' +
+    '---------- \n' +
+    board[6], '|', board[7], '|', board[8], '\n');
 }
 //check row and coloumn if empty or symbol is equal or not
 checkMatch = (num1, num2, num3) => {
